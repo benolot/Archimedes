@@ -1,2 +1,2 @@
 # Archimedes
-A lightweight CMS built on the laravel framework for PHP
+A lightweight boilerplate for the laravel framework in PHP.
