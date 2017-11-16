@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// TODO: Make controllers for Routes, as well as name them, group them and apply middleware.
+
+Route::get('/admin/home', function() {
+	return view('admin.home');
+});
