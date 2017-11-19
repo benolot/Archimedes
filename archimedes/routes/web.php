@@ -24,5 +24,9 @@ Route::get('/', function () {
 Route::get('/admin/home', function() {
 	return view('admin.home');
 });
+Route::get('/admin/blog/new', function() {
+	return view('admin.blog.new');
+})->name('admin.blog.new');
+Route::post('blog/new', 'Admin\AdminBlogController@newPost')->name('admin.blog.new.post');
 
 
