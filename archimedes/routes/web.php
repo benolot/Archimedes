@@ -23,10 +23,10 @@ Route::get('/', function () {
 
 Route::get('/admin/home', function() {
 	return view('admin.home');
-});
+})->middleware('auth')->name('admin.home');
 Route::get('/admin/blog/new', function() {
 	return view('admin.blog.new');
-})->name('admin.blog.new');
-Route::post('blog/new', 'Admin\AdminBlogController@newPost')->name('admin.blog.new.post');
+})->middleware('auth')->name('admin.blog.new');
+Route::post('blog/new', 'Admin\AdminBlogController@newPost')->middleware('auth')->name('admin.blog.new.post');
 
 
